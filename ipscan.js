@@ -7,12 +7,12 @@
     CSsim.requests.push(xhttp);
     xhttp.onreadystatechange = function() {
       if(this.readyState == 4 && this.status==200) {
-        CSsim.gateWay = IP.substring(7,IP.length);
+        CSsim.gateWay = IP.substring(8,IP.length);
         console.log("Gateway founded");
       }
     }
     xhttp.onerror = function(e){
-      CSsim.gateWay = IP.substring(7,IP.length);
+      CSsim.gateWay = IP.substring(8,IP.length);
       CSsim.log("Posible gateway found: "+CSsim.gateWay,"gateway");
       CSsim.requests.forEach(function(req){
         req.abort();
@@ -37,7 +37,7 @@
       }
     }
     xhttp.onerror = function(e){
-      CSsim.devicesIP.push(IP.substring(7,IP.length-1));
+      CSsim.devicesIP.push(IP.substring(8,IP.length-1));
       CSsim.log("Devices founded: " + CSsim.devicesIP.join(','),"device");
     }
     xhttp.ontimeout = function () {  }
@@ -52,7 +52,7 @@
     for (n=0;n<255;n++){
       (function(n,_this){
         setTimeout(function(){
-          ping("http://192.168."+n+".1");
+          ping("https://192.168."+n+".1");
           CSsim.log(0.3,"progressbar");
 
         },n*250);
@@ -69,7 +69,7 @@
     for (n=2;n<255;n++){
       (function(n,_this){
         setTimeout(function(){
-          ping2("http://"+ip+n+"/");
+          ping2("https://"+ip+n+"/");
           CSsim.log(2,"progressbar");
         },n*250);
       })(n,this);
