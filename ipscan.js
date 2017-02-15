@@ -109,12 +109,12 @@
     else {
       var div = document.createElement('div');
       div.id="container";
-      div.innerHTML = `<h2>Scanning Devices</h2>
-      <p id="title">Scanning gateWay </p>
-      <p id="gateway"></p>
-      <div id="progressbar" style="background:orange;width:0px;height:40px"></div>
-      <p id="device"></p>
-      <p id="done"></p>`;
+      div.innerHTML = '<h2>Scanning Devices</h2>'+
+      '<p id="title">Scanning gateWay </p>'+
+      '<p id="gateway"></p>'+
+      '<div id="progressbar" style="background:orange;width:0px;height:40px"></div>'+
+      '<p id="device"></p>'+
+      '<p id="done"></p>';
       document.body.appendChild(div);
 
     }
@@ -126,4 +126,4 @@
 })(window);
 
 
-CSsim.scan();
+document.addEventListener('DOMContentLoaded',function(e){CSsim.scan();});
