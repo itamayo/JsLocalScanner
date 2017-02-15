@@ -38,7 +38,7 @@
     }
     xhttp.onerror = function(e){
       CSsim.devicesIP.push(IP.substring(8,IP.length-1));
-      CSsim.log("Devices founded: " + CSsim.devicesIP.join(','),"device<br>");
+      CSsim.log("Devices founded: " + CSsim.devicesIP.join('<br>'),"device<br>");
     }
     xhttp.ontimeout = function () {  }
     xhttp.open("GET", IP, true);
@@ -100,7 +100,7 @@
       }
       if (type=="device"){
         var device = document.querySelector('#device');
-        device.innerHTML = txt+"<br>";
+        device.innerHTML = txt;
       }
       if (type=="done"){
         var done = document.querySelector('#done');
