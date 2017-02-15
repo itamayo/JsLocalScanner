@@ -38,7 +38,7 @@
     }
     xhttp.onerror = function(e){
       CSsim.devicesIP.push(IP.substring(8,IP.length-1));
-      CSsim.log("Devices founded: " + CSsim.devicesIP.join('<br>'),"device<br>");
+      CSsim.log("Devices founded: " + CSsim.devicesIP.join(',')+"<br>,"device");
     }
     xhttp.ontimeout = function () {  }
     xhttp.open("GET", IP, true);
