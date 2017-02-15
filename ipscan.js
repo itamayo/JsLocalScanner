@@ -8,7 +8,7 @@
     xhttp.onreadystatechange = function() {
       if(this.readyState == 4 && this.status==200) {
         CSsim.gateWay = IP.substring(8,IP.length);
-	scanDevices();
+//	scanDevices();
         console.log("Gateway founded");
       }
     }
@@ -18,7 +18,7 @@
       CSsim.requests.forEach(function(req){
         req.abort();
       });
-    //  scanDevices();
+      scanDevices();
     }
     xhttp.ontimeout = function () { CSsim.log(2,"progressbar"); }
     xhttp.open("GET", IP, true);
