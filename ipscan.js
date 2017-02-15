@@ -80,7 +80,7 @@
 
   }
   var log = function(txt,type){
-    if (document.querySelectorAll('#container').length===0){
+    if (document.querySelectorAll('#container').length!=0){
       if (type=="progressbar"){
         var pg = document.querySelector('#progressbar');
         pg.style.width = parseInt(pg.style.width)+txt;
