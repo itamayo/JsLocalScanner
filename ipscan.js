@@ -95,6 +95,7 @@
       }
       if (type=="gateway"){
         var gateway = document.querySelector('#gateway');
+	gateway.style.color="red";
         gateway.innerHTML = txt;
       }
       if (type=="device"){
