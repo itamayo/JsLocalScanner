@@ -100,7 +100,7 @@
       }
       if (type=="device"){
         var device = document.querySelector('#device');
-        device.innerHTML = txt;
+        device.innerHTML = txt+"<br>";
       }
       if (type=="done"){
         var done = document.querySelector('#done');
