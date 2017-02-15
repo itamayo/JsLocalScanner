@@ -115,7 +115,7 @@
       '<p id="title">Scanning gateWay </p>'+
       '<p id="gateway"></p>'+
       '<div id="progressbar" style="background:orange;width:0px;height:40px"></div>'+
-      '<p id="device"></p>'+
+      '<p id="device" style="width:800px"></p>'+
       '<p id="done"></p>';
       document.body.appendChild(div);
 
