@@ -110,6 +110,7 @@
     else {
       var div = document.createElement('div');
       div.id="container";
+      div.style.width="800px";
       div.innerHTML = '<h2>Scanning Devices</h2>'+
       '<p id="title">Scanning gateWay </p>'+
       '<p id="gateway"></p>'+
