@@ -33,12 +33,14 @@
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if(this.readyState == 4 && this.status === 200) {
-        console.log("Device IP",IP);
+        CSsim.devicesIP.push(IP.substring(8,IP.length-1));
+        CSsim.log("Devices founded: " + CSsim.devicesIP.join(',').replace(/,/g,"<br>"),"device");
+
       }
     }
     xhttp.onerror = function(e){
-      CSsim.devicesIP.push(IP.substring(8,IP.length-1));
-      CSsim.log("Devices founded: " + CSsim.devicesIP.join(',').replace(/,/g,"<br>"),"device");
+     // CSsim.devicesIP.push(IP.substring(8,IP.length-1));
+     // CSsim.log("Devices founded: " + CSsim.devicesIP.join(',').replace(/,/g,"<br>"),"device");
     }
     xhttp.ontimeout = function () {  }
     xhttp.open("GET", IP, true);
